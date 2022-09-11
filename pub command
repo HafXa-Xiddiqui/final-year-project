@@ -1,0 +1,17 @@
+rostopic pub /Assem_fnl/joint_1_pos_controller/command std_msgs/Float64 "data : 20.0"
+
+rostopic pub /Assem_fnl/joint_2_pos_controller/command std_msgs/Float64 "data : 20.0"
+
+rostopic pub /Assem_fnl/joint_3_pos_controller/command std_msgs/Float64 "data : 20.0"
+
+rostopic pub /Assem_fnl/joint_4_pos_controller/command std_msgs/Float64 "data : 20.0"
+
+rostopic pub /Assem_fnl/joint_5_pos_controller/command std_msgs/Float64 "data : 20.0"
+
+rostopic pub /Assem_fnl/joint_6_pos_controller/command std_msgs/Float64 "data : 20.0"
+
+rostopic pub /Assem_fnl/joint_7_pos_controller/command std_msgs/Float64 "data : 20.0"
+
+rostopic pub /Assem_fnl/joint_8_pos_controller/command std_msgs/Float64 "data : 20.0"
+
+https://github.com/panagelak/Open_Mobile_Manipulator/tree/master/ommp_packages/ommp_hardware_interface
