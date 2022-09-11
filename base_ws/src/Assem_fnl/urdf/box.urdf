@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com)
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="box">
+
+    <link
+      name="cube">
+      <inertial>
+        <origin
+          xyz="0.000245228555021293 -0.000485601868001451 0.0326909146616174"
+          rpy="0 0 0" />
+        <mass
+          value="7"/>
+        <inertia
+          ixx="0.008701656"
+          ixy="-0.000134145"
+          ixz="0.002807382"
+          iyx="0.002807382"
+          iyy="0.010493128"
+          iyz="-0.000209051"
+          izx="0.002807382"
+          izy="-0.000209051"
+          izz="0.007528117" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://Assem_fnl/meshes/visual/cube.STL" />
+        </geometry>
+        <material
+          name="">
+          <color
+            rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://Assem_fnl/meshes/visual/cube.STL" />
+        </geometry>
+      </collision>
+    </link>
+
+    <gazebo reference="cube">
+      <mu1>20000.0</mu1>
+      <mu2>20000</mu2>
+    </gazebo>
+
+</robot>

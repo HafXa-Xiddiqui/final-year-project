@@ -1,0 +1,85 @@
+
+joint_state_controller:
+  type : joint_state_controller/JointStateController
+  publish_rate : 100
+
+joint_1_pos_controller:
+  type : position_controllers/JointPositionController
+  joint : joint_sh1_1
+
+joint_2_pos_controller:
+  type : position_controllers/JointPositionController
+  joint : joint_sh1_2
+
+joint_3_pos_controller:
+  type : position_controllers/JointPositionController
+  joint : joint_sh2_1
+
+joint_4_pos_controller:
+  type : position_controllers/JointPositionController
+  joint : joint_sh2_2
+
+joint_5_pos_controller:
+  type : position_controllers/JointPositionController
+  joint : rod_wth_cylin_joint
+
+joint_6_pos_controller:
+  type : position_controllers/JointPositionController
+  joint : dual_redrod_joint
+
+joint_7_pos_controller:
+  type : position_controllers/JointPositionController
+  joint : sub_claw_part_1_joint
+
+joint_8_pos_controller:
+  type : velocity_controllers/JointPositionController
+  joint : claw_part_2_2_joint
+  pid: {p: 100000.0 , i: 0.01, d: 1000.0}
+
+# base_controller:
+#  type: "effort_controllers/JointTrajectoryController"
+#  joints:
+  # - joint_sh1_1
+  # - joint_sh1_2
+  # - joint_sh2_1
+  # - joint_sh2_2
+ # gains: # Required because we're controlling a velocity interface
+   # joint_sh1_1: {p: 100000.0, i: 0.01, d: 1000.0}
+   # joint_sh1_2: {p: 100000.0, i: 0.01, d: 1000.0}
+   # joint_sh2_1: {p: 100000.0, i: 0.01, d: 1000.0}
+   # joint_sh2_2: {p: 100000.0, i: 0.01, d: 1000.0}
+
+
+arm_controller:
+  type: "effort_controllers/JointTrajectoryController"
+  joints:
+   - rod_wth_cylin_joint
+   - dual_redrod_joint
+   - sub_claw_part_1_joint
+
+  gains: # Required because we're controlling a velocity interface
+    rod_wth_cylin_joint: {p: 100000.0, i: 0.01, d: 1000.0}
+    dual_redrod_joint: {p: 100000.0, i: 0.01, d: 1000.0}
+    sub_claw_part_1_joint: {p: 100000.0, i: 0.01, d: 1000.0}
+
+Gripper_controller:
+  type: "effort_controllers/JointTrajectoryController"
+  joints:
+   - claw_1_joint
+   - claw_2_joint
+
+  gains: # Required because we're controlling a velocity interface
+    claw_1_joint: {p: 100000.0, i: 0.01, d: 1000.0}
+    claw_2_joint: {p: 100000.0, i: 0.01, d: 1000.0}
+
+
+gazebo_ros_control/pid_gains:
+  joint_sh1_1: {p: 100000.0, i: 0.01, d: 1000.0}
+  joint_sh1_2: {p: 100000.0, i: 0.01, d: 1000.0}
+  joint_sh2_1: {p: 100000.0, i: 0.01, d: 1000.0}
+  joint_sh2_2: {p: 100000.0, i: 0.01, d: 1000.0}
+  rod_wth_cylin_joint: {p: 1000.0, i: 0.01, d: 1000.0}
+  dual_redrod_joint: {p: 1000.0, i: 0.01, d: 1000.0}
+  sub_claw_part_1_joint: {p: 100000.0, i: 0.01, d: 1000.0}
+  claw_1_joint: {p: 100000.0, i: 0.01, d: 1000.0}
+  claw_2_joint: {p: 100000.0, i: 0.01, d: 1000.0}

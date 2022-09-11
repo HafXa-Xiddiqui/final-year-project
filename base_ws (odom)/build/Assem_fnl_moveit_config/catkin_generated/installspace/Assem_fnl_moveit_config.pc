@@ -1,0 +1,8 @@
+prefix=/home/hafsa/base_ws/install
+
+Name: Assem_fnl_moveit_config
+Description: Description of Assem_fnl_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

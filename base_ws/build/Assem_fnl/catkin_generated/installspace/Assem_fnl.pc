@@ -1,0 +1,8 @@
+prefix=/home/hafsa/base_ws/install
+
+Name: Assem_fnl
+Description: Description of Assem_fnl
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

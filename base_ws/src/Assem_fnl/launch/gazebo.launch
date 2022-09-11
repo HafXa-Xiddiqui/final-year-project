@@ -1,0 +1,51 @@
+<launch>
+ <include file="$(find gazebo_ros)/launch/empty_world.launch">
+ </include>
+
+  <!-- param server -->
+<param name="robot_description" textfile="$(find Assem_fnl)/urdf/Assem_fnl.urdf" />
+<param name="robot_description_2" textfile="$(find Assem_fnl)/urdf/box.urdf" />
+
+  <!-- Spawner -->
+ <node
+   name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
+   args="-urdf -param robot_description -model Assem_fnl"
+   respawn="false" output="screen" />
+
+ <node
+   name="urdf_spawner_2" pkg="gazebo_ros" type="spawn_model"
+   args="-urdf -param robot_description_2 -model box -x 0.95 -y 0 -z 0"
+   respawn="false" output="screen" />
+
+
+  <!--<node
+   name="spawn_model"
+   pkg="gazebo_ros"
+   type="spawn_model"
+   args="-file $(find fyp)/urdf/fyp.urdf -urdf -model fyp"
+   output="screen" />
+-->
+    <!--Load controler type -> param server  -->
+ <rosparam
+   file="$(find Assem_fnl)/config/joint_controllers.yaml"
+   command="load" >
+ </rosparam>
+
+<!--spawn ther controller type -->
+ <node
+   name="controller_spawner"
+   pkg="controller_manager"
+   type="spawner"
+   args="
+      joint_state_controller
+      arm_controller
+      Gripper_controller
+  ">
+  </node>
+  <node
+     name="robot_state_publisher"
+     pkg="robot_state_publisher"
+     type="robot_state_publisher">
+   <remap from="/joint_states" to="/Assem_fnl/joint_states"/>
+ </node>
+</launch>

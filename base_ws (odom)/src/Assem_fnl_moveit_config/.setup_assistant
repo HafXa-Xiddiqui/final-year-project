@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: Assem_fnl
+    relative_path: urdf/Assem_fnl.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/Assem_fnl.srdf
+  CONFIG:
+    author_name: hafsa siddiqui
+    author_email: hafsa.xiddiqui@gmail.com
+    generated_timestamp: 1625154986

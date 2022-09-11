@@ -1,0 +1,1 @@
+controller_joint_names: ['','joint_w', 'joint_sh1_1', 'joint_sh1_2', 'joint_sh2_1', 'joint_sh2_2', 'joint_Msh_1', 'joint_Msh_2', 'motorkooper_joint','rod_wth_cylin_joint','dual_redrod_joint','struct_over_dual_joint','sub_claw_part_1_joint','claw_part_2_2_joint','claw_part_3_joint','claw_1_joint','claw_part_3_2_joint','plate_gripper_joint','claw_2_joint','plate2_gripper2_joint']

@@ -1,0 +1,8 @@
+prefix=/home/hafsa/base_ws/devel
+
+Name: Assem_fnl_hardware_interface
+Description: Description of Assem_fnl_hardware_interface
+Version: 0.5.0
+Cflags: -I/home/hafsa/base_ws/src/Assem_fnl_hardware_interface/include
+Libs: -L${prefix}/lib -lgeneric_hw_control_loop -lgeneric_hw_interface -lsim_hw_interface
+Requires: hardware_interface controller_manager roscpp control_msgs trajectory_msgs urdf joint_limits_interface transmission_interface control_toolbox std_msgs sensor_msgs rosparam_shortcuts

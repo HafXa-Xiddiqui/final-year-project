@@ -1,0 +1,16 @@
+controller_list:
+ - name: arm_controller
+   action_ns: follow_joint_trajectory
+   type: FollowJointTrajectory
+   joints: [rod_wth_cylin_joint, dual_redrod_joint, sub_claw_part_1_joint]
+
+ - name: Gripper_controller
+   action_ns: follow_joint_trajectory
+   type: FollowJointTrajectory
+   parallel: true
+   joints: [claw_1_joint, claw_2_joint]
+
+# - name: base_controller
+#   action_ns: follow_joint_trajectory
+#   type: FollowJointTrajectory
+#   joints: [joint_sh1_1, joint_sh1_2, joint_sh2_1, joint_sh2_2]

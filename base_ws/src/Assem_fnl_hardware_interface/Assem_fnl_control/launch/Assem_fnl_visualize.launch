@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Load example URDF -->
+  <param name="robot_description" textfile="$(find Assem_fnl)/urdf/Assem_fnl.urdf" />
+  <!-- Show in Rviz  -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find Assem_fnl)/launch/display.rviz"/>
+
+</launch>
